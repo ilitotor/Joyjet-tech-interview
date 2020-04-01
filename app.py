@@ -70,6 +70,7 @@ def total_amount(cart, articles, delivery_fees=None, discounts=None):
 
     return total
 
+
 @app.route('/<level>', methods=['GET'])
 def home(level):
     filename = f"{level}/data.json"
@@ -91,5 +92,6 @@ def home(level):
 
     return jsonify(output)
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
